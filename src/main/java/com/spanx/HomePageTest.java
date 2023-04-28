@@ -34,8 +34,7 @@ public class HomePageTest {
     @And("Check title")
     public void check_title() {
         String currentGetTitle = driver.getTitle();
-        String exGetTitle = "SPANX | Shapewear, Clothing, Activewear &amp; Intimates\n" +
-                "&ndash; Spanx";
+        String exGetTitle = "";
         Assert.assertTrue(exGetTitle.equals(currentGetTitle));
 
     }
