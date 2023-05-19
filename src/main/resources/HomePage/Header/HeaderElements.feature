@@ -13,6 +13,7 @@ Feature: Check header elements on spanx.com
   Scenario: Verify main menu display
     Then I see the BestSellersButton item in the main menu
     And Close site
+    And Close site
  # Scenario: Verify main menu display
 #    Then I see the "Shop" item in the main menu
 #    And I see the "About" item in the main menu
