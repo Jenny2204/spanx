@@ -3,8 +3,9 @@ Feature:User Registration
   I want to register on the Spanx website
 
   Background: Check open site: https://spanx.com/
-    Given Open site
-    Then Check current url
+    Given I open the website spanx.com
+    Then the URL should contain spanx.com
+    And the page title should contain SPANX
 
   Scenario: Check open register page
     When Click on sign in icon
