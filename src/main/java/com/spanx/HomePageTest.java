@@ -46,6 +46,13 @@ public class HomePageTest {
         headerClass.checkIconLogo();
 //        headerClass.checkIconLogo2();
 }
+    @Then ("I see the BestSellersButton item in the main menu")
+    public void checkbuttonBestSellers(){
+        HeaderClass headerClass = new HeaderClass(driver);
+        headerClass.buttonBestSellers();
+    }
+
+
 
         @And("Close site")
         public void close_site () {

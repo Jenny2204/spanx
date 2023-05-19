@@ -12,7 +12,7 @@ public class HeaderClass {
     By signUpIcon = By.xpath("//header/div[4]/ul[1]/li[2]/div[1]/button[1]/*[1]");
     By buttonCreateAccount = By.xpath("//a[contains(text(),'Create An Account')]");
     By iconLogo = By.xpath("//header/div[2]/div[1]/h1[1]/a[1]/img[1]");
-
+    By BestSellersButton = By.xpath("//div[contains(text(),'Best Sellers')]");
     public HeaderClass(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
@@ -60,4 +60,13 @@ public class HeaderClass {
             Assert.assertFalse("Logo alt attribute is empty", logoAlt.isEmpty());
         }
 
+
+    public void buttonBestSellers() {
+        if (driver.findElement(BestSellersButton).isDisplayed()) {
+            driver.findElement(BestSellersButton).getAttribute("href");
+            driver.findElement(BestSellersButton).getAttribute("class");
+        } else {
+            System.out.println("not found iconLogo");
+        }
     }
+}
