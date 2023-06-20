@@ -58,6 +58,39 @@
   <version>7.11.2</version>
   <scope>test</scope>
 </dependency>
+  <dependency>
+    <groupId>io.qameta.allure</groupId>
+    <artifactId>allure-cucumber5-jvm</artifactId>
+    <version>2.21.0</version>
+  </dependency>
+  <dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>RELEASE</version>
+    <scope>compile</scope>
+  </dependency>
+  <dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>RELEASE</version>
+    <scope>compile</scope>
+  </dependency>
+  <dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-junit</artifactId>
+    <version>7.11.2</version>
+    <scope>compile</scope>
+  </dependency>
+  <dependency>
+    <groupId>io.qameta.allure</groupId>
+    <artifactId>allure-cucumber5-jvm</artifactId>
+    <version>2.21.0</version>
+  </dependency>
+  <dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>gherkin</artifactId>
+    <version>26.0.1</version>
+  </dependency>
 </dependencies>
         </project>
 
