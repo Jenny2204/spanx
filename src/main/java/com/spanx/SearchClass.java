@@ -2,6 +2,7 @@ package com.spanx;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -9,9 +10,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class SearchClass {
-    private static WebDriver driver;
+    public static WebDriver driver;
 
-    static By searchInput = By.id("search-input");
+//    static By searchInput = By.id("search-input");
+  static By searchInput = By.name("q");
     static By searchButton = By.cssSelector("svg.button__icon.icon.icon--search");
     static By ResultValue = By.xpath("//span[contains(text(),'Viewing 1-12 out of 15 results for \"dress\"')]");
     public SearchClass(WebDriver driver) {
@@ -20,18 +22,22 @@ public class SearchClass {
     }
 
     public void searchButton() {
-        if (driver.findElement(searchInput).isDisplayed()) {
-            driver.findElement(searchInput).getAttribute("href");
-            driver.findElement(searchInput).getAttribute("class");
+        WebElement searchIconMainPage = driver.findElement(searchInput);
+//        WebElement searchIconMainPage = driver.findElement(By.id("search-input"));
+        if (searchIconMainPage.isDisplayed()) {
+            searchIconMainPage.getAttribute("href");
+            searchIconMainPage.getAttribute("class");
+            searchIconMainPage.sendKeys("dress");
+            searchIconMainPage.sendKeys(Keys.ENTER);
+            System.out.println("fix");
         } else {
             System.out.println("not found Create An Account link");
         }
 
     }
-
-    public static void enterSearchValue() {
-        WebElement searchField = driver.findElement(searchInput);
-        searchField.sendKeys("dress");
+    public void enterSearchValue() {
+        WebElement searchIconMainPage = driver.findElement(searchInput);
+        searchIconMainPage.sendKeys("dress");
 
     }
 

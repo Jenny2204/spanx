@@ -6,11 +6,12 @@ Feature: check the search-input
 
   Scenario:Opening the main page of spanx.com and see Search button is displayed
     Then  Search button is displayed
-#    And Close site
+   And Close site
 
   Scenario:Opening the main page of spanx.com and click on search-input and check relavant result
+    Then  Search button is displayed
     When I enter search field
     And I click on the search button
     Then Verify the search result page
-    And Verify that the search result are accurate and relavant to the search query.
+    Then Verify the relevant result page
     And Close site
